@@ -4,7 +4,7 @@ class Playlist
   attr_accessor :songs
 
   def initialize(songs)
-    @songs = [
+    song_list = [
       ["Hello - Lionel Ritchie"],
       ["Kokomo – The Beach Boys"],
       ["Girl You Know It’s True – Milli Vanilli"],
@@ -20,6 +20,7 @@ class Playlist
       ["I Wanna Dance With Somebody - Whitney Houston"],
       ["U Can't Touch This - MC Hammer"]
     ]
+    @songs = song_list
   end
 
   def shuffle!
@@ -27,6 +28,8 @@ class Playlist
   end
 
   def play!
+    return songs.shift
+    @songs = songs - songs[0]
   end
 
 end
