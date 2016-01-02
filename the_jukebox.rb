@@ -32,6 +32,9 @@ class Playlist
     @songs = songs - songs[0]
   end
 
+  def add_track(track)
+  end
+
 end
 
 binding.pry
