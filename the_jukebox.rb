@@ -26,6 +26,9 @@ class Playlist
     @songs = songs.shuffle
   end
 
+  def play!
+  end
+
 end
 
 binding.pry
