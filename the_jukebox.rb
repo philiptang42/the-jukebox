@@ -1,7 +1,7 @@
 require 'pry'
 
 class Playlist
-  attr_accessor :songlist
+  attr_accessor :songs
 
   def initialize(songs)
     @songs = [
@@ -20,6 +20,10 @@ class Playlist
       ["I Wanna Dance With Somebody - Whitney Houston"],
       ["U Can't Touch This - MC Hammer"]
     ]
+  end
+
+  def shuffle!
+    @songs = songs.shuffle
   end
 
 end
