@@ -29,7 +29,7 @@ class Playlist
 
   def play!
     return songs.shift
-    @songs = songs - songs[0]
+    @songs = songs.delete_at(songs[0])
   end
 
   def add_track(track)
@@ -52,8 +52,8 @@ class Playlist
     song = []
     song << track
     if song_list.include?(song)
-      song_list << song
-      @songs = song_list
+      @songs = songs << song
+      return true
     else
       return false
     end
